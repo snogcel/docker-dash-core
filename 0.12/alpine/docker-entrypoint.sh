@@ -12,7 +12,7 @@ if [ $(echo "$1" | cut -c1) = "-" ] || [ "$1" = "dashd" ]; then
   chmod 700 "$DASH_DATA"
   chown -R dash "$DASH_DATA"
 
-  echo ${DASH_EXTRA_ARGS} >> "$DASH_DATA/dash.conf"
+  echo "${DASH_EXTRA_ARGS}" > "$DASH_DATA/dash.conf"
 
   echo "$0: setting data directory to $DASH_DATA"
 
